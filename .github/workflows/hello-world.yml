@@ -1,0 +1,17 @@
+yaml
+name: Custom CI Workflow
+on:
+   push:
+     branches:
+     - main
+
+jobs:
+  say_hello:
+  runs-on: ubuntu-latest
+  steps:
+  -name: Checkout repository code
+  uses: actions/checkount@v4
+  -name: Hello step
+  run: echo "Hello from nursultanaspanov3"
+  -name: Show System Info
+  run: uname-a
